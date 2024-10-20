@@ -1,3 +1,14 @@
+if (typeof window.widgetSDK === 'undefined') {
+    window.widgetSDK = {}; // Initialize widgetSDK object
+    console.log("widgetSDK created");
+}
+
+// Define the run method on widgetSDK
+window.widgetSDK.run = function(config) {
+    console.log("Running widget with config:", config);
+    alert(`Running Widget SDK with token: ${config.websiteToken}\nBase URL: ${config.baseUrl}\nWidget Color: ${config.widgetColor}`);
+};
+
 (function() {
     const scriptTag = document.querySelector('script[src*="currencyWidget.js"]');
     const redirectUrl = scriptTag.getAttribute('data-redirect-url');
@@ -20,7 +31,7 @@
     stickyIcon.style.left = '0';
     stickyIcon.style.width = '50px';
     stickyIcon.style.height = '50px';
-    stickyIcon.style.backgroundColor = widgetColor; 
+    stickyIcon.style.backgroundColor = widgetColor;
     stickyIcon.style.color = 'white';
     stickyIcon.style.display = 'flex';
     stickyIcon.style.alignItems = 'center';
