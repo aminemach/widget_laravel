@@ -17,8 +17,6 @@ window.widgetSDK.run = function(config) {
 
     if (window.widgetSDK) {
         window.widgetSDK.run({
-            websiteToken: websiteToken,
-            baseUrl: baseUrl,
             widgetColor: widgetColor,
             headerColor: headerColor,
             buttonColor: buttonColor
