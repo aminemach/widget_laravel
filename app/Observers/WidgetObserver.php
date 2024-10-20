@@ -25,6 +25,7 @@ class WidgetObserver
                 var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
                 g.src = BASE_URL + "/js/currencyWidget.js"; // Link to your widgetConvert.js
                 s.parentNode.insertBefore(g, s);
+                console.log("widgetSDK:", window.widgetSDK);
                 g.onload = function() {
                     window.widgetSDK.run({
                         websiteToken: '{$companyReference}',
