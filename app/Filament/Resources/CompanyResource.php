@@ -34,9 +34,10 @@ class CompanyResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name'),
-                Tables\Columns\TextColumn::make('link'),
-                Tables\Columns\TextColumn::make('reference'),
+                Tables\Columns\ImageColumn::make('icon')->label('Icon')->size(40), // Display the icon with a size of 40px
+                Tables\Columns\TextColumn::make('name')->label('Name'),
+                Tables\Columns\TextColumn::make('link')->label('Link'),
+                Tables\Columns\TextColumn::make('reference')->label('Reference'),
             ]);
     }
 

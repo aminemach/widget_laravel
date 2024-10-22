@@ -13,7 +13,7 @@ class WidgetObserver
     public function created(Widget $widget): void
     {
         $companyReference = $widget->company->reference;
-        $baseURL = 'http://localhost:8000';// Change to your actual base URL
+        $baseURL = 'https://aminemach.github.io/widget_laravel/resources';// Change to your actual base URL
         $widgetColor = $widget->widget_color ?? '#f9f9f9';
         $headerColor = $widget->header_color ?? '#007bff';
         $buttonColor = $widget->button_color ?? '#007bff';
@@ -28,7 +28,7 @@ class WidgetObserver
                 console.log("widgetSDK:", window.widgetSDK);
                 g.onload = function() {
                     window.widgetSDK.run({
-                        websiteToken: '{$companyReference}',
+                        companyRef: '{$companyReference}',
                         baseUrl: BASE_URL,
                         widgetColor: '{$widgetColor}',
                         headerColor: '{$headerColor}',
