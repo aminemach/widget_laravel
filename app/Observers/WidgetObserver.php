@@ -23,9 +23,8 @@ class WidgetObserver
             (function(d, t) {
                 var BASE_URL = '{$baseURL}';
                 var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
-                g.src = BASE_URL + "/js/currencyWidget.js"; // Link to your widgetConvert.js
+                g.src = BASE_URL + "/js/currencyWidget.js";
                 s.parentNode.insertBefore(g, s);
-                console.log("widgetSDK:", window.widgetSDK);
                 g.onload = function() {
                     window.widgetSDK.run({
                         companyRef: '{$companyReference}',
